@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
-const clientId = process.env.CLIENT_ID;
+const clientId = process.env.CLIENT_ID!;
 
 export const getClient = async (_req: Request, res: Response) => {
   try {
